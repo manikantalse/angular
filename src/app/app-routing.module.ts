@@ -9,6 +9,18 @@ const routes: Routes = [
     component: CardsComponent
   },
   {
+    path: 'books',
+    component: CardsComponent
+  },
+  {
+    path: 'houses',
+    component: CardsComponent
+  },
+  {
+    path: 'characters',
+    component: CardsComponent
+  },
+  {
     path: 'characters/:id',
     component: DetailsComponent
   },
