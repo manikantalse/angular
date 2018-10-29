@@ -1,24 +1,10 @@
-<h1>Cards</h1>
-
-<!-- <ul>
-  <li >
-    <a routerLink="/details/{{card.id}}">{{ card.name }}</a>
-
-    <ul>
-      <li>{{ card.culture }}</li>
-      <li><a href="http://{{ card.url }}">{{ card.url }}</a></li>
-    </ul>
-  </li>
-</ul> -->
-
-
-
-<div id="cards-container">
+<h1 class="text-center">Game of thrones</h1>
+<div class="container" id="cards-container">
   <div class="row">
-    <div class="col-sm-2" *ngFor="let card of allItems">
-      <div *ngIf="card.region" class="card">
+    <div class="col-sm-4" *ngFor="let card of allItems">
+      <div *ngIf="card.region" class="card" style="margin-top:30px;">
         <h5 class="card-header">House</h5>
-        <img class="card-img-top" src="../assets/got.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../assets/houses.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Name: {{ card.name }}</h5>
           <p class="card-text">Alias: {{ card.aliases }}
@@ -26,9 +12,9 @@
           <a href="#" class="btn btn-secondary" [routerLink]="['/houses',card.url.split('houses/').pop()]">View more</a>
         </div>
       </div>
-      <div *ngIf="card.gender" class="card">
+      <div *ngIf="card.gender" class="card" style="margin-top:30px;">
         <h5 class="card-header">Character</h5>
-        <img class="card-img-top" src="../assets/got.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../assets/characters.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Name: {{ card.name }}</h5>
           <p class="card-text">Alias: {{ card.aliases }}
@@ -36,9 +22,9 @@
           <a href="#" class="btn btn-secondary" [routerLink]="['/characters',card.url.split('characters/').pop()]">View more</a>
         </div>
       </div>
-      <div *ngIf="card.isbn" class="card">
+      <div *ngIf="card.isbn" class="card" style="margin-top:30px;">
         <h5 class="card-header">Book</h5>
-        <img class="card-img-top" src="../assets/got.jpg" alt="Card image cap">
+        <img class="card-img-top" src="../assets/books.jpg" alt="Card image cap">
         <div class="card-body">
           <h5 class="card-title">Name: {{ card.name }}</h5>
           <p class="card-text">Alias: {{ card.aliases }}

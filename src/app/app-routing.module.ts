@@ -25,15 +25,15 @@ const routes: Routes = [
     component: CardsComponent
   },
   {
-    path: 'characters/:id',
+    path: 'characters/:characterId',
     component: DetailsComponent
   },
   {
-    path: 'books/:id',
+    path: 'books/:bookId',
     component: DetailsComponent
   },
   {
-    path: 'houses/:id',
+    path: 'houses/:houseId',
     component: DetailsComponent
   },
 ];

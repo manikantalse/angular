@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 
 import { Observable } from 'rxjs';
 
@@ -30,6 +30,7 @@ export class DataService {
     return myResponseOfBooks;
   }
   public getSingleCharacterInformation(characterId): any {
+    console.log("character id:" + characterId);
     let myResponseOfCharacter = this._http.get('https://anapioficeandfire.com/api' + '/characters' + '/' + characterId)
     return myResponseOfCharacter;
   }
